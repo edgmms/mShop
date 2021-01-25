@@ -13,10 +13,10 @@ namespace mShop.Catalog.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public partial class ProductController : ControllerBase
     {
         [HttpGet("Search")]
-        public IActionResult Get([FromQuery] ProductSearchModel model)
+        public virtual IActionResult Get([FromQuery] ProductSearchModel model)
         {
             var _productService = EngineContext.Current.Resolve<IProductService>();
 
@@ -29,14 +29,14 @@ namespace mShop.Catalog.Api.Controllers
                 {
                     return x.ToModel<ProductModel>();
                 }),
-                TotalCount = 15, 
+                TotalCount = products.TotalCount, 
             };
 
             return Ok(data);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(string id)
+        public virtual async Task<IActionResult> Get(string id)
         {
             var _productService = EngineContext.Current.Resolve<IProductService>();
 
@@ -49,7 +49,7 @@ namespace mShop.Catalog.Api.Controllers
         }
 
         [HttpPost("Create")]
-        public async Task<IActionResult> Post([FromBody] ProductModel model)
+        public virtual async Task<IActionResult> Post([FromBody] ProductModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -69,7 +69,7 @@ namespace mShop.Catalog.Api.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Put([FromBody] ProductModel model)
+        public virtual async Task<IActionResult> Put([FromBody] ProductModel model)
         {
             var _productService = EngineContext.Current.Resolve<IProductService>();
 
@@ -85,7 +85,7 @@ namespace mShop.Catalog.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(string id)
+        public virtual async Task<IActionResult> Delete(string id)
         {
             var _productService = EngineContext.Current.Resolve<IProductService>();
 

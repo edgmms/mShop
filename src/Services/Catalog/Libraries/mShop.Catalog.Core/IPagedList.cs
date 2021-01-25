@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace mShop.Core
+namespace mShop.Catalog.Core
 {
     /// <summary>
     /// Paged list interface.

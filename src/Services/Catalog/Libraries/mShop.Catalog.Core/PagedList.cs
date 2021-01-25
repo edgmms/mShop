@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace mShop.Core
+namespace mShop.Catalog.Core
 {
     /// <summary>
     /// Paged list.

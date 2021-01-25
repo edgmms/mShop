@@ -14,7 +14,6 @@ namespace mShop.Catalog.Api.Models
 
         /// <summary>
         /// Gets the TotalCount
-        /// Total count.
         /// </summary>
         int TotalCount { get; set; }
     }

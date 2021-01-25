@@ -1,5 +1,5 @@
-﻿using mShop.Catalog.Core.Domain.Catalog;
-using mShop.Core;
+﻿using mShop.Catalog.Core;
+using mShop.Catalog.Core.Domain.Catalog;
 using System.Linq;
 
 namespace mShop.Catalog.Services

@@ -2,6 +2,9 @@
 
 namespace mShop.Catalog.Api.Models
 {
+    /// <summary>
+    /// Defines the <see cref="BaseFullAuditedEntityModel" />.
+    /// </summary>
     public class BaseFullAuditedEntityModel : BaseEntityModel
     {
         /// <summary>
@@ -12,7 +15,7 @@ namespace mShop.Catalog.Api.Models
         /// <summary>
         /// Gets or sets the CreatedOnUtc.
         /// </summary>
-        public DateTime CreatedOnUtc { get; set; } 
+        public DateTime CreatedOnUtc { get; set; }
 
         /// <summary>
         /// Gets or sets the UpdatedById.
@@ -22,7 +25,7 @@ namespace mShop.Catalog.Api.Models
         /// <summary>
         /// Gets or sets the UpdatedOnUtc.
         /// </summary>
-        public DateTime UpdatedOnUtc { get; set; } 
+        public DateTime UpdatedOnUtc { get; set; }
 
         /// <summary>
         /// Gets or sets the DeletedById.

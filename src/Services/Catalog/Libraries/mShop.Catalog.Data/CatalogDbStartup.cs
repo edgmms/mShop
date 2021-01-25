@@ -7,9 +7,9 @@ using mShop.Catalog.Data.Infrastructure;
 namespace mShop.Catalog.Data
 {
     /// <summary>
-    /// Defines the <see cref="MongoDbStartup" />.
+    /// Defines the <see cref="CatalogDbStartup" />.
     /// </summary>
-    public class MongoDbStartup : IMShopStartup
+    public class CatalogDbStartup : IMShopStartup
     {
         /// <summary>
         /// Gets the Order.

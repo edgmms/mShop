@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace mShop.Catalog.Api.Models.Results
+﻿namespace mShop.Catalog.Api.Models.Results
 {
     public interface IDataResult : IResult
     {

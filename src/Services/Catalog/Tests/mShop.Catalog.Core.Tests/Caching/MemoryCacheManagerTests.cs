@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Caching.Memory;
 using mShop.Catalog.Core.Caching;
 using NUnit.Framework;
-using System;
 using System.Threading.Tasks;
 
 namespace mShop.Catalog.Core.Tests.Caching
