@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using mShop.Basket.Core.Infrastructure;
-using mShop.Basket.Core.Infrastructure.DependencyManagement;
+using mShop.Core.Infrastructure;
+using mShop.Core.Infrastructure.DependencyManagement;
 
 namespace mShop.Basket.Data.Infrastructure
 {

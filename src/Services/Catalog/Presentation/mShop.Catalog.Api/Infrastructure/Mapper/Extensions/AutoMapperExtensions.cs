@@ -1,6 +1,6 @@
 ﻿using mShop.Catalog.Api.Models;
 using mShop.Catalog.Core;
-using mShop.Catalog.Core.Infrastructure.Mapper;
+using mShop.Core.Infrastructure.Mapper;
 using System;
 using System.Threading.Tasks;
 

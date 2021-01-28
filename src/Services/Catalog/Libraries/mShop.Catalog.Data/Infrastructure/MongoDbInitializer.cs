@@ -32,6 +32,7 @@ namespace mShop.Catalog.Data.Infrastructure
             try
             {
                 var client = new MongoClient(_mongoDbSettings.ConnectionString);
+
                 var database = client.GetDatabase(_mongoDbSettings.Database);
 
                 database.CreateMongoCollection(nameof(Product));

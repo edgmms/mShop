@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using mShop.Catalog.Api.Infrastructure.StartupExtensions;
-using mShop.Catalog.Core.Infrastructure;
+using mShop.Core.Infrastructure;
 
 namespace mShop.Catalog.Api
 {

@@ -15,4 +15,3 @@ services:
         build:
             context: .
             dockerfile: src/Services/Basket/Presentation/mShop.Basket.Api/Dockerfile
-

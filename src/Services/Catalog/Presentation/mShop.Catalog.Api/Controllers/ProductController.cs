@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using mShop.Catalog.Api.Infrastructure.Mapper.Extensions;
 using mShop.Catalog.Api.Models.Catalog;
-using mShop.Catalog.Api.Models.Results;
-using mShop.Catalog.Api.Models.Results.Messages;
+using mShop.Catalog.Api.Models.Messages;
 using mShop.Catalog.Core.Domain.Catalog;
-using mShop.Catalog.Core.Infrastructure;
 using mShop.Catalog.Services;
+using mShop.Core.Infrastructure;
+using mShop.Core.Results;
 using System.Linq;
 using System.Threading.Tasks;
 

@@ -3,10 +3,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using mShop.Basket.Core;
-using mShop.Basket.Core.Infrastructure;
 using mShop.Basket.Data;
+using mShop.Core;
+using mShop.Core.Infrastructure;
+using mShop.EventBus;
 using Newtonsoft.Json.Serialization;
+using RabbitMQ.Client;
 using System;
 using System.Net;
 
@@ -169,6 +171,25 @@ namespace mShop.Basket.Api.Infrastructure.StartupExtensions
             //        ValidateAudience = false
             //    };
             //});
+        }
+
+        public static void AddBasketEventBus(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton<IRabbitMQConnection>(sp =>
+            {
+                var factory = new ConnectionFactory()
+                {
+                    HostName = configuration["EventBusSettings:Hostname"]
+                };
+
+                if (!string.IsNullOrEmpty(configuration["EventBusSettings:Username"]))
+                    factory.UserName = configuration["EventBusSettings:Username"];
+
+                if (!string.IsNullOrEmpty(configuration["EventBusSettings:Password"]))
+                    factory.Password = configuration["EventBusSettings:Password"];
+
+                return new RabbitMQConnection(factory);
+            });
         }
     }
 }

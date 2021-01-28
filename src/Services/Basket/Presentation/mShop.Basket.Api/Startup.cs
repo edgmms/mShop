@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using mShop.Basket.Api.Infrastructure.StartupExtensions;
-using mShop.Basket.Core.Infrastructure;
+using mShop.Core.Infrastructure;
 
 namespace mShop.Basket.Api
 {

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using mShop.Catalog.Core.Infrastructure;
 using mShop.Catalog.Data.Infrastructure;
+using mShop.Core.Infrastructure;
 
 namespace mShop.Catalog.Data
 {

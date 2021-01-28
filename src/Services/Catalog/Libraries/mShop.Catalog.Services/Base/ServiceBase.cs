@@ -1,6 +1,6 @@
 ﻿using mShop.Catalog.Core;
-using mShop.Catalog.Core.Infrastructure;
 using mShop.Catalog.Data;
+using mShop.Core.Infrastructure;
 using System;
 using System.Threading.Tasks;
 

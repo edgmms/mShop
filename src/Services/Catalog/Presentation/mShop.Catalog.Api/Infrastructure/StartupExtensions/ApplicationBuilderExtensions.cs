@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
-using mShop.Catalog.Core.Infrastructure;
+using mShop.Core.Infrastructure;
 using System.Runtime.ExceptionServices;
 using System.Threading.Tasks;
 

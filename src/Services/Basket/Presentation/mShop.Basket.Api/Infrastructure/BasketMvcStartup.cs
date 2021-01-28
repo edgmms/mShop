@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using mShop.Basket.Api.Infrastructure.StartupExtensions;
-using mShop.Basket.Core.Infrastructure;
+using mShop.Core.Infrastructure;
 
 namespace mShop.Basket.Api.Infrastructure
 {
@@ -23,6 +23,9 @@ namespace mShop.Basket.Api.Infrastructure
 
             //add swagger
             services.AddBasketSwaggerGen();
+
+            //add event bus
+            services.AddBasketEventBus(configuration);
         }
 
         /// <summary>

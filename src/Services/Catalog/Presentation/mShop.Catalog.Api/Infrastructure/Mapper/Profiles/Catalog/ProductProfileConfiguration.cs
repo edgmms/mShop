@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using mShop.Catalog.Api.Models.Catalog;
 using mShop.Catalog.Core.Domain.Catalog;
-using mShop.Catalog.Core.Infrastructure.Mapper;
+using mShop.Core.Infrastructure.Mapper;
 
 namespace mShop.Catalog.Api.Infrastructure.Mapper.Profiles.Catalog
 {

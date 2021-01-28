@@ -49,7 +49,7 @@ namespace mShop.EventBus
             {
                 _connection = _connectionFactory.CreateConnection();
             }
-            catch (BrokerUnreachableException ex)
+            catch (BrokerUnreachableException)
             {
                 Thread.Sleep(2000);
                 _connection = _connectionFactory.CreateConnection();

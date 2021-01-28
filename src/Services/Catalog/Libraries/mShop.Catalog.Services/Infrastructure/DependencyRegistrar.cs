@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using mShop.Catalog.Core.Infrastructure;
-using mShop.Catalog.Core.Infrastructure.DependencyManagement;
+using mShop.Core.Infrastructure;
+using mShop.Core.Infrastructure.DependencyManagement;
 
 namespace mShop.Catalog.Services.Infrastructure
 {
