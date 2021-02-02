@@ -7,6 +7,7 @@ using mShop.Basket.Data;
 using mShop.Core;
 using mShop.Core.Infrastructure;
 using mShop.EventBus;
+using mShop.EventBus.Producer;
 using Newtonsoft.Json.Serialization;
 using RabbitMQ.Client;
 using System;
@@ -190,6 +191,8 @@ namespace mShop.Basket.Api.Infrastructure.StartupExtensions
 
                 return new RabbitMQConnection(factory);
             });
+
+            services.AddSingleton<RabbitMQProducer>();
         }
     }
 }

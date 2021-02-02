@@ -5,6 +5,8 @@ services:
         image: mongo
     basketdb:
         image: redis
+    rabbitmq:
+        image: rabbitmq:3-management-alpine
     mshop.catalog.api:
         image: ${DOCKER_REGISTRY-}mshopcatalogapi
         build:
