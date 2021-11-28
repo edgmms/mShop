@@ -8,7 +8,7 @@ namespace mShop.Core.Infrastructure
     /// Classes implementing this interface provide information about types 
     /// to various services in the MShop engine.
     /// </summary>
-    public interface ITypeFinder
+    public partial interface ITypeFinder
     {
         /// <summary>
         /// Find classes of type

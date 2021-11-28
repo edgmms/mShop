@@ -12,7 +12,7 @@ namespace mShop.Catalog.Data
     /// Defines the <see cref="GenericMongoRepository{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">.</typeparam>
-    public class GenericMongoRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
+    public partial class GenericMongoRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
         /// <summary>
         /// Defines the Collection.

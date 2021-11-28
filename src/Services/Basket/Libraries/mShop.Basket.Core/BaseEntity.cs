@@ -3,11 +3,8 @@
     /// <summary>
     /// Defines the <see cref="BaseEntity" />.
     /// </summary>
-    public class BaseEntity
+    public partial class BaseEntity
     {
-        /// <summary>
-        /// Gets or sets the Id.
-        /// </summary> 
-        public int Id { get; set; }
+
     }
 }

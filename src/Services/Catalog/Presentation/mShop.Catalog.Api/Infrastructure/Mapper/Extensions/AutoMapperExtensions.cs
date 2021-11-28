@@ -143,7 +143,6 @@ namespace mShop.Catalog.Api.Infrastructure.Mapper.Extensions
             return model.MapTo(entity);
         }
 
-        #endregion
- 
+        #endregion 
     }
 }

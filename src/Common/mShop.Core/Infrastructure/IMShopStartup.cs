@@ -7,7 +7,7 @@ namespace mShop.Core.Infrastructure
     /// <summary>
     /// Represents object for the configuring services and middleware on application startup
     /// </summary>
-    public interface IMShopStartup
+    public partial interface IMShopStartup
     {
         /// <summary>
         /// Add and configure any of the middleware

@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace mShop.Basket.Api
 {
-    public class Program
+    public partial class Program
     {
         public static void Main(string[] args)
         {

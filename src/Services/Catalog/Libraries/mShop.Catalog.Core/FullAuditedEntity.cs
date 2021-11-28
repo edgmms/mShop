@@ -7,7 +7,7 @@ namespace mShop.Catalog.Core
     /// <summary>
     /// Defines the <see cref="FullAuditedEntity" />.
     /// </summary>
-    public class FullAuditedEntity : BaseEntity
+    public partial class FullAuditedEntity : BaseEntity
     {
         /// <summary>
         /// Gets or sets the CreatedById.

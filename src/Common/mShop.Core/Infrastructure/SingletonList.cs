@@ -6,7 +6,7 @@ namespace mShop.Core.Infrastructure
     /// Provides a singleton list for a certain type.
     /// </summary>
     /// <typeparam name="T">The type of list to store.</typeparam>
-    public class SingletonList<T> : Singleton<IList<T>>
+    public partial class SingletonList<T> : Singleton<IList<T>>
     {
         static SingletonList()
         {

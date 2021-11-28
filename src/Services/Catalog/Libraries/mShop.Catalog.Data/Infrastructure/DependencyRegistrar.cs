@@ -7,7 +7,7 @@ namespace mShop.Catalog.Data.Infrastructure
     /// <summary>
     /// Defines the <see cref="DependencyRegistrar" />.
     /// </summary>
-    public class DependencyRegistrar : IDependencyRegistrar
+    public partial class DependencyRegistrar : IDependencyRegistrar
     {
         /// <summary>
         /// Gets the Order.

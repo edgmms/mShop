@@ -9,7 +9,7 @@ namespace mShop.Catalog.Data
     /// <summary>
     /// Defines the <see cref="CatalogDbStartup" />.
     /// </summary>
-    public class CatalogDbStartup : IMShopStartup
+    public partial class CatalogDbStartup : IMShopStartup
     {
         /// <summary>
         /// Gets the Order.

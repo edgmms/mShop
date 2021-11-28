@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="CatalogDbSettings" />.
     /// </summary>
-    public class CatalogDbSettings
+    public partial class CatalogDbSettings
     {
         /// <summary>
         /// Gets or sets the ConnectionString.

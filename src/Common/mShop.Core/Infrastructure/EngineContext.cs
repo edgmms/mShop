@@ -5,7 +5,7 @@ namespace mShop.Core.Infrastructure
     /// <summary>
     /// Provides access to the singleton instance of the MShop engine.
     /// </summary>
-    public class EngineContext
+    public partial class EngineContext
     {
         #region Methods
 

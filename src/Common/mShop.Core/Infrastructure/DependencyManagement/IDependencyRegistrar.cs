@@ -5,7 +5,7 @@ namespace mShop.Core.Infrastructure.DependencyManagement
     /// <summary>
     /// Dependency registrar interface
     /// </summary>
-    public interface IDependencyRegistrar
+    public partial interface IDependencyRegistrar
     {
         /// <summary>
         /// Register services and interfaces

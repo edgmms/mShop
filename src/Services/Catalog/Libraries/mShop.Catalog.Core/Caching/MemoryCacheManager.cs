@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace mShop.Catalog.Core.Caching
 {
-    public class MemoryCacheManager : ICacheManager
+    public partial class MemoryCacheManager : ICacheManager
     {
         #region Fields
 

@@ -9,7 +9,7 @@ namespace mShop.Catalog.Api.Infrastructure
     /// <summary>
     /// Represents object for the configuring MVC on application startup
     /// </summary>
-    public class CatalogMvcStartup : IMShopStartup
+    public partial class CatalogMvcStartup : IMShopStartup
     {
         /// <summary>
         /// Add and configure any of the middleware

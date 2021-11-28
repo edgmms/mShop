@@ -5,7 +5,7 @@ namespace mShop.Catalog.Api.Models
     /// <summary>
     /// Defines the <see cref="BaseFullAuditedEntityModel" />.
     /// </summary>
-    public class BaseFullAuditedEntityModel : BaseEntityModel
+    public partial class BaseFullAuditedEntityModel : BaseEntityModel
     {
         /// <summary>
         /// Gets or sets the CreatedById.

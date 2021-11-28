@@ -5,7 +5,7 @@ namespace mShop.Catalog.Core.Domain.Catalog
     /// <summary>
     /// Defines the <see cref="Category" />.
     /// </summary>
-    public class Category : FullAuditedEntity
+    public partial class Category : FullAuditedEntity
     {
         /// <summary>
         /// Gets or sets the Name.

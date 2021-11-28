@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="ProductModel" />.
     /// </summary>
-    public class ProductModel : BaseFullAuditedEntityModel
+    public partial class ProductModel : BaseFullAuditedEntityModel
     {
         /// <summary>
         /// Gets or sets the Name.

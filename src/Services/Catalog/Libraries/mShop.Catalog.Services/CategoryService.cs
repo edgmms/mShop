@@ -5,7 +5,7 @@ namespace mShop.Catalog.Services
     /// <summary>
     /// Defines the <see cref="CategoryService" />.
     /// </summary>
-    public class CategoryService : ServiceBase<Category>, ICategoryService
+    public partial class CategoryService : ServiceBase<Category>, ICategoryService
     {
     }
 }

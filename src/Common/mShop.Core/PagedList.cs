@@ -9,7 +9,7 @@ namespace mShop.Core
     /// </summary>
     /// <typeparam name="T">T.</typeparam>
     [Serializable]
-    public class PagedList<T> : List<T>, IPagedList<T>
+    public partial class PagedList<T> : List<T>, IPagedList<T>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="PagedList{T}"/> class.

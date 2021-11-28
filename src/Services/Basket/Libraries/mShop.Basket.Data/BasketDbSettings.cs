@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="BasketDbSettings" />.
     /// </summary>
-    public class BasketDbSettings
+    public partial class BasketDbSettings
     {
         /// <summary>
         /// Gets or sets the ConnectionString.

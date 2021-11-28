@@ -6,7 +6,7 @@ namespace mShop.Core
     /// Paged list interface.
     /// </summary>
     /// <typeparam name="T">.</typeparam>
-    public interface IPagedList<T> : IList<T>
+    public partial interface IPagedList<T> : IList<T>
     {
         /// <summary>
         /// Gets the PageIndex

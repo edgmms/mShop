@@ -9,7 +9,7 @@ namespace mShop.Basket.Api.Infrastructure
     /// <summary>
     /// Represents object for the configuring common features and middleware on application startup
     /// </summary>
-    public class BasketCommonStartup : IMShopStartup
+    public partial class BasketCommonStartup : IMShopStartup
     {
         /// <summary>
         /// Add and configure any of the middleware

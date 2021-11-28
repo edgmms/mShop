@@ -9,7 +9,7 @@ namespace mShop.Catalog.Api.Infrastructure
     /// <summary>
     /// Represents object for the configuring common features and middleware on application startup
     /// </summary>
-    public class CatalogCommonStartup : IMShopStartup
+    public partial class CatalogCommonStartup : IMShopStartup
     {
         /// <summary>
         /// Add and configure any of the middleware

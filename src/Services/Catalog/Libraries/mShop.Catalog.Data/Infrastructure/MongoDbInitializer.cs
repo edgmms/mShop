@@ -8,7 +8,7 @@ namespace mShop.Catalog.Data.Infrastructure
     /// <summary>
     /// Defines the <see cref="CatalogDbSeeder" />.
     /// </summary>
-    public class MongoDbInitializer : IDbInitializer
+    public partial class MongoDbInitializer : IDbInitializer
     {
         /// <summary>
         /// Defines the _mongoDbSettings.

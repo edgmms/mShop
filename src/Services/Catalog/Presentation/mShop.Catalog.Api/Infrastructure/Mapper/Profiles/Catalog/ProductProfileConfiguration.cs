@@ -8,7 +8,7 @@ namespace mShop.Catalog.Api.Infrastructure.Mapper.Profiles.Catalog
     /// <summary>
     /// Defines the <see cref="ProductProfileConfiguration" />.
     /// </summary>
-    public class ProductProfileConfiguration : Profile, IOrderedMapperProfile
+    public partial class ProductProfileConfiguration : Profile, IOrderedMapperProfile
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProductProfileConfiguration"/> class.

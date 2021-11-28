@@ -20,7 +20,7 @@ RUN dotnet restore "src/Services/Basket/Presentation/mShop.Basket.Api/mShop.Bask
 COPY . .
 WORKDIR "/src/src/Services/Basket/Presentation/mShop.Basket.Api"
 RUN dotnet build "mShop.Basket.Api.csproj" -c Release -o /app/build
-
+ 
 FROM build AS publish
 RUN dotnet publish "mShop.Basket.Api.csproj" -c Release -o /app/publish
 

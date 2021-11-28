@@ -11,7 +11,7 @@ namespace mShop.Catalog.Api
     /// <summary>
     /// Defines the <see cref="Startup" />.
     /// </summary>
-    public class Startup
+    public partial class Startup
     {
         /// <summary>
         /// Defines the _configuration.

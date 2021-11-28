@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="CategoryModel" />.
     /// </summary>
-    public class CategoryModel : BaseEntityModel
+    public partial class CategoryModel : BaseEntityModel
     {
         /// <summary>
         /// Gets or sets the Name.

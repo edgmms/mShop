@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace mShop.Catalog.Core.Tests.Caching
 {
     [TestFixture]
-    public class MemoryCacheManagerTests
+    public partial class MemoryCacheManagerTests
     {
         private MemoryCacheManager _cacheManager;
 

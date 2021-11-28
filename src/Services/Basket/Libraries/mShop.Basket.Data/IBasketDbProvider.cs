@@ -7,7 +7,7 @@ namespace mShop.Basket.Data
     /// <summary>
     /// Represents Redis connection wrapper.
     /// </summary>
-    public interface IBasketDbProvider : IDisposable
+    public partial interface IBasketDbProvider : IDisposable
     {
         /// <summary>
         /// Obtain an interactive connection to a database inside Redis.

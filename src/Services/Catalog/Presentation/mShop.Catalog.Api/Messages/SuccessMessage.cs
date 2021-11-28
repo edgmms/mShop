@@ -1,6 +1,6 @@
 ﻿namespace mShop.Catalog.Api.Models.Messages
 {
-    public class SuccessMessage
+    public partial class SuccessMessage
     {
         public static string ProductInserted => "Ürün başarılı bir şekilde eklendi";
 

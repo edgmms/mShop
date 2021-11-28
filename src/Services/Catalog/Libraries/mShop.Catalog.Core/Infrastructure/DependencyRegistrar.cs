@@ -5,7 +5,7 @@ using mShop.Core.Infrastructure.DependencyManagement;
 
 namespace mShop.Catalog.Core.Infrastructure
 {
-    public class DependencyRegistrar : IDependencyRegistrar
+    public partial class DependencyRegistrar : IDependencyRegistrar
     {
         public int Order => -3;
 

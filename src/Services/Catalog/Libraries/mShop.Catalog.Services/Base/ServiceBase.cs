@@ -10,7 +10,7 @@ namespace mShop.Catalog.Services
     /// Defines the <see cref="ServiceBase{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">.</typeparam>
-    public class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : BaseEntity
+    public partial class ServiceBase<TEntity> : IServiceBase<TEntity> where TEntity : BaseEntity
     {
         /// <summary>
         /// Defines the _repository.

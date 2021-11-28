@@ -7,7 +7,7 @@ namespace mShop.Basket.Data
     /// <summary>
     /// Defines the <see cref="BasketRepository" />.
     /// </summary>
-    public class BasketRepository : IBasketRepository
+    public partial class BasketRepository : IBasketRepository
     {
         /// <summary>
         /// Defines the _basketDbProvider.

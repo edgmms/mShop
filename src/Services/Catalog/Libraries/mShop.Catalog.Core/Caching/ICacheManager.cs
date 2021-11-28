@@ -6,7 +6,7 @@ namespace mShop.Catalog.Core.Caching
     /// <summary>
     /// Represents a manager for caching
     /// </summary>
-    public interface ICacheManager : IDisposable
+    public partial interface ICacheManager : IDisposable
     {
         /// <summary>
         /// Get a cached item. If it's not in the cache yet, then load and cache it

@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="BaseEntityModel" />.
     /// </summary>
-    public class BaseEntityModel : BaseModel
+    public partial class BaseEntityModel : BaseModel
     {
         /// <summary>
         /// Gets or sets the Id.

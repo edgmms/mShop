@@ -16,7 +16,7 @@ namespace mShop.Core.Infrastructure
     /// <summary>
     /// Represents MShop engine
     /// </summary>
-    public class MShopEngine : IEngine
+    public partial class MShopEngine : IEngine
     {
         #region Fields
 

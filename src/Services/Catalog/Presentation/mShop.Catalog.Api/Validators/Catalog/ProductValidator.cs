@@ -4,7 +4,7 @@ using mShop.Catalog.Api.Validators.Messages;
 
 namespace mShop.Catalog.Api.Validators.Catalog
 {
-    public class ProductValidator : BaseFluentValidator<ProductModel>
+    public partial class ProductValidator : BaseFluentValidator<ProductModel>
     {
         public ProductValidator()
         {

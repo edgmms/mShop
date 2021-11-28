@@ -5,7 +5,7 @@ namespace mShop.Catalog.Api.Models
     /// <summary>
     /// Defines the <see cref="BaseEntitySearchModel" />.
     /// </summary>
-    public class BaseEntitySearchModel : BaseModel
+    public partial class BaseEntitySearchModel : BaseModel
     {
         /// <summary>
         /// Gets or sets the PageSize.

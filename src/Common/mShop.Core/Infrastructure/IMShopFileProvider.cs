@@ -8,7 +8,7 @@ namespace mShop.Core.Infrastructure
     /// <summary>
     /// A file provider abstraction
     /// </summary>
-    public interface IMShopFileProvider : IFileProvider
+    public partial interface IMShopFileProvider : IFileProvider
     {
         /// <summary>
         /// Combines an array of strings into a path

@@ -7,7 +7,7 @@ namespace mShop.Catalog.Services
     /// Defines the <see cref="IServiceBase{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">.</typeparam>
-    public interface IServiceBase<TEntity> where TEntity : BaseEntity
+    public partial interface IServiceBase<TEntity> where TEntity : BaseEntity
     {
         /// <summary>
         /// The GetByIdAsync.

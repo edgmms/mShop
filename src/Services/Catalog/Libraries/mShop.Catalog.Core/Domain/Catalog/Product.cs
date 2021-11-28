@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="Product" />.
     /// </summary>
-    public class Product : FullAuditedEntity
+    public partial class Product : FullAuditedEntity
     {
         /// <summary>
         /// Gets or sets the Name.

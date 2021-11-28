@@ -11,7 +11,7 @@ namespace mShop.Catalog.Data
     /// Defines the <see cref="IRepository{TEntity}" />.
     /// </summary>
     /// <typeparam name="TEntity">.</typeparam>
-    public interface IRepository<TEntity> where TEntity : BaseEntity
+    public partial interface IRepository<TEntity> where TEntity : BaseEntity
     {
         /// <summary>
         /// Gets the Table.

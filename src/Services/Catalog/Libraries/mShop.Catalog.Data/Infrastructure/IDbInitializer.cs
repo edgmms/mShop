@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="IDbInitializer" />.
     /// </summary>
-    public interface IDbInitializer
+    public partial interface IDbInitializer
     {
         /// <summary>
         /// The SeedData.

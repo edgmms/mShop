@@ -7,7 +7,7 @@ namespace mShop.Catalog.Services
     /// <summary>
     /// Defines the <see cref="ProductService" />.
     /// </summary>
-    public class ProductService : ServiceBase<Product>, IProductService
+    public partial class ProductService : ServiceBase<Product>, IProductService
     {
         /// <summary>
         /// The SearchProducts.

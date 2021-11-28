@@ -12,7 +12,7 @@ namespace mShop.Core.Infrastructure
     /// <summary>
     /// IO functions using the on-disk file system
     /// </summary>
-    public class MShopFileProvider : PhysicalFileProvider, IMShopFileProvider
+    public partial class MShopFileProvider : PhysicalFileProvider, IMShopFileProvider
     {
         /// <summary>
         /// Initializes a new instance of a MShopFileProvider

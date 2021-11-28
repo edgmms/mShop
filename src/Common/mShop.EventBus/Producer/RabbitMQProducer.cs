@@ -2,23 +2,36 @@
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace mShop.EventBus.Producer
 {
-    public class RabbitMQProducer
+    /// <summary>
+    /// Defines the <see cref="RabbitMQProducer" />.
+    /// </summary>
+    public partial class RabbitMQProducer
     {
+        /// <summary>
+        /// Defines the _rabbitMQConnection.
+        /// </summary>
         private readonly IRabbitMQConnection _rabbitMQConnection;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RabbitMQProducer"/> class.
+        /// </summary>
+        /// <param name="rabbitMQConnection">The rabbitMQConnection<see cref="IRabbitMQConnection"/>.</param>
         public RabbitMQProducer(IRabbitMQConnection rabbitMQConnection)
         {
             _rabbitMQConnection = rabbitMQConnection;
         }
 
-        public void Publish<TPublishModel>(string queueName, TPublishModel publishModel) where TPublishModel : BaseEventModel
+        /// <summary>
+        /// The Publish.
+        /// </summary>
+        /// <typeparam name="TPublishModel">.</typeparam>
+        /// <param name="queueName">The queueName<see cref="string"/>.</param>
+        /// <param name="publishModel">The publishModel<see cref="TPublishModel"/>.</param>
+        public void Publish<TPublishModel>(string queueName, TPublishModel publishModel) where TPublishModel : BaseEvent
         {
             using (var channel = _rabbitMQConnection.CreateModel())
             {
@@ -44,6 +57,5 @@ namespace mShop.EventBus.Producer
 
             }
         }
-
     }
 }

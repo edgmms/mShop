@@ -10,7 +10,7 @@ namespace mShop.Basket.Data
     /// <summary>
     /// Represents Redis context implementation.
     /// </summary>
-    public class BasketDbProvider : IBasketDbProvider
+    public partial class BasketDbProvider : IBasketDbProvider
     {
         /// <summary>
         /// Defines the _disposed.

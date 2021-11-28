@@ -8,7 +8,7 @@ using mShop.Core.Infrastructure;
 
 namespace mShop.Basket.Api
 {
-    public class Startup
+    public partial class Startup
     {
         /// <summary>
         /// Defines the _configuration.
