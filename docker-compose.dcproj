@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>dc0ad7a8-8645-4db7-b058-f34eb0af7c64</ProjectGuid>
+    <ProjectGuid>2f47a872-d61b-4c85-91ab-64b38fd8ccff</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>mshop.catalog.api</DockerServiceName>

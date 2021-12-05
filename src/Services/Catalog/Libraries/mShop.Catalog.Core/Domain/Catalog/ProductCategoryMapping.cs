@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="ProductCategoryMapping" />.
     /// </summary>
-    public partial class ProductCategoryMapping : BaseEntity
+    public partial class ProductCategoryMapping : FullAuditedEntity
     {
         /// <summary>
         /// Gets or sets a value indicating whether FeaturedProduct.

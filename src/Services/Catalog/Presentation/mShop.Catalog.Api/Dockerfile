@@ -4,10 +4,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 
-#FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
-FROM mcr.microsoft.com/dotnet/sdk:5.0.102-ca-patch-buster-slim AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-#COPY ["src/Services/Catalog/Presentation/mShop.Catalog.Api/nuget.config", "src/Services/Catalog/Presentation/mShop.Catalog.Api/"]
 COPY ["src/Services/Catalog/Presentation/mShop.Catalog.Api/mShop.Catalog.Api.csproj", "src/Services/Catalog/Presentation/mShop.Catalog.Api/"]
 COPY ["src/Services/Catalog/Libraries/mShop.Catalog.Services/mShop.Catalog.Services.csproj", "src/Services/Catalog/Libraries/mShop.Catalog.Services/"]
 COPY ["src/Services/Catalog/Libraries/mShop.Catalog.Data/mShop.Catalog.Data.csproj", "src/Services/Catalog/Libraries/mShop.Catalog.Data/"]
