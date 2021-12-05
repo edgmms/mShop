@@ -51,7 +51,9 @@ namespace mShop.Basket.Data
         {
             var key = string.Format(ShoppingCartDefaults.ShoppingCartKey, customerId, shoppingCart.ShoppingCartTypeId);
 
-            var updated = await _basketDbProvider.GetDatabase().StringSetAsync(key, JsonConvert.SerializeObject(shoppingCart));
+            var value = JsonConvert.SerializeObject(shoppingCart);
+
+            var updated = await _basketDbProvider.GetDatabase().StringSetAsync(key, value);
 
             if (!updated)
                 return null;

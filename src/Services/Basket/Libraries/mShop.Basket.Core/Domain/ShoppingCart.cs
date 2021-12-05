@@ -10,11 +10,6 @@ namespace mShop.Basket.Core.Domain
     public partial class ShoppingCart : BaseEntity
     {
         /// <summary>
-        /// Defines the _shoppingCartItems.
-        /// </summary>
-        private ICollection<ShoppingCartItem> _shoppingCartItems;
-
-        /// <summary>
         /// Gets or sets the shopping cart type identifier.
         /// </summary>
         public int ShoppingCartTypeId { get; set; }
@@ -27,18 +22,12 @@ namespace mShop.Basket.Core.Domain
         /// <summary>
         /// Gets or sets the ShoppingCartType
         /// Gets the log type.
-        /// </summary>
-        [JsonIgnore]
-        [XmlIgnore]
+        /// </summary> 
         public ShoppingCartType ShoppingCartType { get => (ShoppingCartType)ShoppingCartTypeId; set => ShoppingCartTypeId = (int)value; }
 
         /// <summary>
         /// Gets or sets the ShoppingCartItems.
         /// </summary>
-        public virtual ICollection<ShoppingCartItem> ShoppingCartItems
-        {
-            get { return _shoppingCartItems ?? new List<ShoppingCartItem>(); }
-            set { _shoppingCartItems = value; }
-        }
+        public virtual List<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

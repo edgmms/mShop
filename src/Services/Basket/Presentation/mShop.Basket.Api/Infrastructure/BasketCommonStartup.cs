@@ -26,9 +26,6 @@ namespace mShop.Basket.Api.Infrastructure
              
             //add distributed memory cache
             services.AddDistributedMemoryCache();
-
-            //add localization
-            //services.AddLocalization();
         }
 
         /// <summary>
@@ -39,12 +36,6 @@ namespace mShop.Basket.Api.Infrastructure
         {
             //use response compression
             application.UseBasketResponseCompression();
-
-            ////use request localization
-            //application.UseBasketRequestLocalization();
-
-            ////set request culture
-            //application.UseCulture();
         }
 
         /// <summary>

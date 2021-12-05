@@ -4,11 +4,20 @@ services:
   catalogdb:
     image: mongo
 
+  basketdb:
+    image: redis:alpine
+
   mshop.catalog.api:
     image: ${DOCKER_REGISTRY-}mshopcatalogapi
     build:
       context: .
       dockerfile: src/Services/Catalog/Presentation/mShop.Catalog.Api/Dockerfile
+
+  mshop.basket.api:
+    image: ${DOCKER_REGISTRY-}mshopbasketapi
+    build:
+      context: .
+      dockerfile: src/Services/Basket/Presentation/mShop.Basket.Api/Dockerfile
 
 volumes:
   mongo_data:

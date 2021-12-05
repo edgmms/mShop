@@ -22,6 +22,9 @@ namespace mShop.Basket.Data.Infrastructure
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
             //redis context
+            builder.RegisterType<RedisDbInitializer>().As<IDbInitializer>().InstancePerLifetimeScope();
+
+            //redis context
             builder.RegisterType<BasketDbProvider>().As<IBasketDbProvider>().InstancePerLifetimeScope();
 
             //basket repository

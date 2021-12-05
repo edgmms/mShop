@@ -1,6 +1,7 @@
 version: '3.4'
 
 services:
+
   catalogdb:
     container_name: catalogdb
     restart: always
@@ -8,6 +9,12 @@ services:
         - "27017:27017" 
     volumes:
         - mongo_data:/data/db 
+
+  basketdb:
+    container_name: basketdb
+    restart: always    
+    ports:
+        - "6379:6379"
 
   mshop.catalog.api:
     container_name: mshop.catalog.api
@@ -18,3 +25,14 @@ services:
       - catalogdb
     ports:
       - "8000:80"
+
+  mshop.basket.api:
+    container_name: mshop.basket.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "BasketDbSettings:ConnectionString=basketdb:6379"
+    depends_on:
+      - basketdb
+    ports:
+      - "8001:80"
+       
