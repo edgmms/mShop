@@ -15,7 +15,7 @@ namespace mShop.Basket.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CheckoutController : ControllerBase
+    public partial class CheckoutController : ControllerBase
     {
         #region Fields
 

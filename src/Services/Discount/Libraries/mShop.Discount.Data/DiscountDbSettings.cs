@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace mShop.Discount.Data
+﻿namespace mShop.Discount.Data
 {
     public partial class DiscountDbSettings
     {
@@ -12,10 +6,5 @@ namespace mShop.Discount.Data
         /// Gets or sets the ConnectionString.
         /// </summary>
         public string ConnectionString { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Database.
-        /// </summary>
-        public string Database { get; set; }
     }
 }

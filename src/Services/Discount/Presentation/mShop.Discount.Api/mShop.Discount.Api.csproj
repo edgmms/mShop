@@ -10,10 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Libraries\mShop.Discount.Services\mShop.Discount.Services.csproj" />
   </ItemGroup>
 

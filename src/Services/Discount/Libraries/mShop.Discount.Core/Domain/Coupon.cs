@@ -3,12 +3,12 @@
     /// <summary>
     /// Defines the <see cref="Coupon" />.
     /// </summary>
-    public class Coupon : BaseEntity
+    public partial class Coupon : BaseEntity
     {
         /// <summary>
-        /// Gets or sets the ProductName.
+        /// Gets or sets the ProductId.
         /// </summary>
-        public string ProductName { get; set; }
+        public int ProductId { get; set; }
 
         /// <summary>
         /// Gets or sets the Description.

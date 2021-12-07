@@ -2,7 +2,7 @@
 using mShop.Core.Infrastructure;
 using mShop.Core.Infrastructure.DependencyManagement;
 
-namespace mShop.Basket.Data.Infrastructure
+namespace mShop.Discount.Services.Infrastructure
 {
     /// <summary>
     /// Defines the <see cref="DependencyRegistrar" />.
@@ -12,7 +12,7 @@ namespace mShop.Basket.Data.Infrastructure
         /// <summary>
         /// Gets the Order.
         /// </summary>
-        public int Order => -2;
+        public int Order => -1;
 
         /// <summary>
         /// The Register.
@@ -21,14 +21,7 @@ namespace mShop.Basket.Data.Infrastructure
         /// <param name="typeFinder">The typeFinder<see cref="ITypeFinder"/>.</param>
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
-            //db initializer
-            builder.RegisterType<RedisDbInitializer>().As<IDbInitializer>().InstancePerLifetimeScope();
-
-            //db provider
-            builder.RegisterType<BasketDbProvider>().As<IBasketDbProvider>().InstancePerLifetimeScope();
-
-            //basket repository
-            builder.RegisterType<BasketRepository>().As<IBasketRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<CouponService>().As<ICouponService>().InstancePerLifetimeScope();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace mShop.Basket.Api.Infrastructure.Mapper.Profiles.ShoppingCart
     /// <summary>
     /// Defines the <see cref="ShoppingCartItemProfileConfiguration" />.
     /// </summary>
-    public class ShoppingCartItemProfileConfiguration : Profile, IOrderedMapperProfile
+    public partial class ShoppingCartItemProfileConfiguration : Profile, IOrderedMapperProfile
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ShoppingCartItemProfileConfiguration"/> class.

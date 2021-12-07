@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines the <see cref="DeleteShoppingCartModel" />.
     /// </summary>
-    public class DeleteShoppingCartModel : BaseEntityModel
+    public partial class DeleteShoppingCartModel : BaseEntityModel
     {
         /// <summary>
         /// Gets or sets the ShoppingCartTypeId.

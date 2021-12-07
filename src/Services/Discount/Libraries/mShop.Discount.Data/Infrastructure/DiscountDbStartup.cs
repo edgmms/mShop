@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using mShop.Basket.Data.Infrastructure;
 using mShop.Core.Infrastructure;
 
-namespace mShop.Basket.Data
+namespace mShop.Discount.Data.Infrastructure
 {
-    public partial class BasketDbStartup : IMShopStartup
+    public partial class DiscountDbStartup : IMShopStartup
     {
         /// <summary>
         /// Gets the Order.

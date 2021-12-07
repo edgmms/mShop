@@ -5,7 +5,7 @@ namespace mShop.Basket.Api.Models.ShoppingCart
     /// <summary>
     /// Defines the <see cref="DeleteShoppingCartItemModel" />.
     /// </summary>
-    public class DeleteShoppingCartItemModel : BaseEntityModel
+    public partial class DeleteShoppingCartItemModel : BaseEntityModel
     {
         /// <summary>
         /// Gets or sets the ProductId.

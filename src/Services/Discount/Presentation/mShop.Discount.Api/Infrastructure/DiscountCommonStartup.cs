@@ -23,12 +23,6 @@ namespace mShop.Discount.Api.Infrastructure
 
             //add options feature
             services.AddOptions();
-             
-            //add distributed memory cache
-            services.AddDistributedMemoryCache();
-
-            //add localization
-            //services.AddLocalization();
         }
 
         /// <summary>
@@ -39,12 +33,6 @@ namespace mShop.Discount.Api.Infrastructure
         {
             //use response compression
             application.UseDiscountResponseCompression();
-
-            ////use request localization
-            //application.UseDiscountRequestLocalization();
-
-            ////set request culture
-            //application.UseCulture();
         }
 
         /// <summary>

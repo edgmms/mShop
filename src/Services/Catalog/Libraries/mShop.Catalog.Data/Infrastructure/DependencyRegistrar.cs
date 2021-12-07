@@ -24,7 +24,7 @@ namespace mShop.Catalog.Data.Infrastructure
             builder.RegisterType<MongoDbInitializer>().As<IDbInitializer>().InstancePerLifetimeScope();
 
             //repositories
-            builder.RegisterGeneric(typeof(GenericMongoRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
+            builder.RegisterGeneric(typeof(MongoRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
         }
     }
 }

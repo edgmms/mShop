@@ -2,7 +2,7 @@
 using mShop.Core.Infrastructure;
 using mShop.Core.Infrastructure.DependencyManagement;
 
-namespace mShop.Basket.Data.Infrastructure
+namespace mShop.Discount.Data.Infrastructure
 {
     /// <summary>
     /// Defines the <see cref="DependencyRegistrar" />.
@@ -21,14 +21,13 @@ namespace mShop.Basket.Data.Infrastructure
         /// <param name="typeFinder">The typeFinder<see cref="ITypeFinder"/>.</param>
         public void Register(ContainerBuilder builder, ITypeFinder typeFinder)
         {
-            //db initializer
-            builder.RegisterType<RedisDbInitializer>().As<IDbInitializer>().InstancePerLifetimeScope();
+            builder.RegisterType<PostgreDbInitializer>().As<IDbInitializer>().InstancePerLifetimeScope();
 
-            //db provider
-            builder.RegisterType<BasketDbProvider>().As<IBasketDbProvider>().InstancePerLifetimeScope();
+            //database 
+            builder.RegisterType<DiscountDbContext>().As<IDiscountDbProvider>().InstancePerLifetimeScope();
 
-            //basket repository
-            builder.RegisterType<BasketRepository>().As<IBasketRepository>().InstancePerLifetimeScope();
+            //repositories
+            builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
         }
     }
 }

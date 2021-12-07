@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace mShop.Discount.Api
 {
-    public class Program
+    public partial class Program
     {
         public static void Main(string[] args)
         {
