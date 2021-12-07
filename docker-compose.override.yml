@@ -58,7 +58,6 @@ services:
       - catalogdb
     ports:
       - "8000:80"
-    restart: always
 
   mshop.basket.api:
     container_name: mshop.basket.api
@@ -69,7 +68,6 @@ services:
       - basketdb
     ports:
       - "8001:80"
-    restart: always
   
   mshop.discount.api:
     container_name: mshop.discount.api
@@ -80,5 +78,4 @@ services:
       - discountdb
     ports:
       - "8002:80"
-    restart: always
        
