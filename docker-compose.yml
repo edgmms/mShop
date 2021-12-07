@@ -12,11 +12,9 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    #postgre sql yönetim paneli için pgadmin
 
   portainer:
     image: portainer/portainer-ce
-    #container yönetim aracý
 
   mshop.catalog.api:
     image: ${DOCKER_REGISTRY-}mshopcatalogapi
@@ -29,6 +27,12 @@ services:
     build:
       context: .
       dockerfile: src/Services/Basket/Presentation/mShop.Basket.Api/Dockerfile
+  
+  mshop.discount.api:
+    image: ${DOCKER_REGISTRY-}mshopdiscountapi
+    build:
+      context: .
+      dockerfile: src/Services/Discount/Presentation/mShop.Discount.Api/Dockerfile
 
 volumes:
   mongo_data:

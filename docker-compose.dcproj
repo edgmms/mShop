@@ -6,7 +6,7 @@
     <ProjectGuid>2f47a872-d61b-4c85-91ab-64b38fd8ccff</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
-    <DockerServiceName>mshop.catalog.api</DockerServiceName>
+    <DockerServiceName>mshop.discount.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">
