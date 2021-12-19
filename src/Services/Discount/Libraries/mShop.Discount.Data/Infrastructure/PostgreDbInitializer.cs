@@ -37,7 +37,7 @@ namespace mShop.Discount.Data.Infrastructure
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
             }
         }

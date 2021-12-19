@@ -31,7 +31,7 @@ namespace mShop.Basket.Data.Infrastructure
             try
             {
                 var seedData = SeedShoppingCarts();
-                _basketRepository.UpdateShoppingCart(-1, seedData);
+                _basketRepository.UpdateShoppingCart(1, seedData);
             }
             catch (Exception)
             {
