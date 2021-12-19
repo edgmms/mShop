@@ -20,5 +20,23 @@ namespace mShop.Discount.Services
         /// <param name="productId">The productId<see cref="int"/>.</param>
         /// <returns>The <see cref="Coupon"/>.</returns>
         Coupon GetCouponByProductId(int productId = 0);
+
+        /// <summary>
+        /// The InsertCoupon.
+        /// </summary>
+        /// <param name="coupon">The coupon<see cref="Coupon"/>.</param>
+        void InsertCoupon(Coupon coupon);
+
+        /// <summary>
+        /// The UpdateCoupon.
+        /// </summary>
+        /// <param name="coupon">The coupon<see cref="Coupon"/>.</param>
+        void UpdateCoupon(Coupon coupon);
+
+        /// <summary>
+        /// The DeleteCoupon.
+        /// </summary>
+        /// <param name="coupon">The coupon<see cref="Coupon"/>.</param>
+        void DeleteCoupon(Coupon coupon);
     }
 }

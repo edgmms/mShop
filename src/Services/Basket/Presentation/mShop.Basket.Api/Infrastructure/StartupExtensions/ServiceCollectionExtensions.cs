@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using mShop.Basket.Data;
 using mShop.Core;
 using mShop.Core.Infrastructure;
+using mShop.Discount.Grpc.Protos;
 using mShop.EventBus;
 using mShop.EventBus.Producer;
 using Newtonsoft.Json.Serialization;
@@ -193,6 +194,16 @@ namespace mShop.Basket.Api.Infrastructure.StartupExtensions
             });
 
             services.AddSingleton<RabbitMQProducer>();
+        }
+
+        /// <summary>
+        /// The AddGrpcServiceClient.
+        /// </summary>
+        /// <param name="services">The services<see cref="IServiceCollection"/>.</param>
+        /// <param name="configuration">The configuration<see cref="IConfiguration"/>.</param>
+        public static void AddGrpcServiceClient(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(o => o.Address = new Uri(configuration["GrpcSettings:DiscountUrl"]));
         }
     }
 }

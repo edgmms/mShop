@@ -125,5 +125,20 @@ namespace mShop.Basket.Services
 
             return await this.UpdateShoppingCart(shoppingCart, customerId);
         }
+
+        /// <summary>
+        /// The CalculateCartItemPrice.
+        /// </summary>
+        /// <param name="cartItem">The cartItem<see cref="ShoppingCartItem"/>.</param>
+        /// <param name="discountAmount">The discountAmount<see cref="int"/>.</param>
+        /// <param name="isPercent">The isPercent<see cref="bool"/>.</param>
+        public virtual async void CalculateCartItemPrice(ShoppingCartItem cartItem, int discountAmount, bool isPercent = false)
+        {
+            await Task.Run(() =>
+            {
+                ////TODO: Calculate
+                return cartItem;
+            });
+        }
     }
 }

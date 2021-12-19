@@ -11,6 +11,7 @@ using System.Linq;
 using mShop.EventBus.Producer;
 using mShop.Basket.Api.Models.ShoppingCart;
 using mShop.Core.Results;
+using mShop.Discount.Grpc.Protos;
 
 namespace mShop.Basket.Api.Controllers
 {
@@ -21,14 +22,16 @@ namespace mShop.Basket.Api.Controllers
         #region Fields
 
         private readonly IShoppingCartService _shoppingCartService;
-
+        private readonly DiscountProtoService.DiscountProtoServiceClient _discountProtoServiceClient;
         #endregion
 
         #region Ctor
 
-        public ShoppingCartController(IShoppingCartService shoppingCartService)
+        public ShoppingCartController(IShoppingCartService shoppingCartService, 
+            DiscountProtoService.DiscountProtoServiceClient discountProtoServiceClient)
         {
             _shoppingCartService = shoppingCartService;
+            _discountProtoServiceClient = discountProtoServiceClient;
         }
 
         #endregion
@@ -39,6 +42,16 @@ namespace mShop.Basket.Api.Controllers
         public virtual async Task<IActionResult> Get(int customerId, ShoppingCartType shoppingCartType)
         {
             var shoppingCart = await _shoppingCartService.GetShoppingCart(customerId, shoppingCartType);
+
+            if (shoppingCart.ShoppingCartItems != null && shoppingCart.ShoppingCartItems.Any())
+            {
+                foreach (var cartItem in shoppingCart.ShoppingCartItems)
+                {
+                    var coupon = await _discountProtoServiceClient.GetDiscountAsync(new GetDiscountRequest { ProductId = cartItem.ProductId });
+                    _shoppingCartService.CalculateCartItemPrice(cartItem, coupon.Amount);
+                }
+            }
+
             var result = new SuccessDataResult(shoppingCart);
             return Ok(result);
         }

@@ -37,7 +37,7 @@ namespace mShop.Basket.Services
         /// </summary>
         /// <param name="shoppingCartItem">The shoppingCartItem<see cref="ShoppingCartItem"/>.</param>
         /// <param name="customerId">The customerId<see cref="int"/>.</param>
-        /// <param name="shoppingCart">The shoppingCart<see cref="ShoppingCartType"/>.</param>
+        /// <param name="shoppingCartType">The shoppingCartType<see cref="ShoppingCartType"/>.</param>
         /// <returns>The <see cref="Task{ShoppingCart}"/>.</returns>
         Task<ShoppingCart> InsertShoppingCartItem(ShoppingCartItem shoppingCartItem, int customerId, ShoppingCartType shoppingCartType = ShoppingCartType.ShoppingCart);
 
@@ -46,7 +46,7 @@ namespace mShop.Basket.Services
         /// </summary>
         /// <param name="shoppingCartItem">The shoppingCartItem<see cref="ShoppingCartItem"/>.</param>
         /// <param name="customerId">The customerId<see cref="int"/>.</param>
-        /// <param name="shoppingCart">The shoppingCart<see cref="ShoppingCartType"/>.</param>
+        /// <param name="shoppingCartType">The shoppingCartType<see cref="ShoppingCartType"/>.</param>
         /// <returns>The <see cref="Task{ShoppingCart}"/>.</returns>
         Task<ShoppingCart> UpdateShoppingCartItem(ShoppingCartItem shoppingCartItem, int customerId, ShoppingCartType shoppingCartType = ShoppingCartType.ShoppingCart);
 
@@ -55,8 +55,16 @@ namespace mShop.Basket.Services
         /// </summary>
         /// <param name="productId">The productId<see cref="int"/>.</param>
         /// <param name="customerId">The customerId<see cref="int"/>.</param>
-        /// <param name="shoppingCart">The shoppingCart<see cref="ShoppingCartType"/>.</param>
+        /// <param name="shoppingCartType">The shoppingCartType<see cref="ShoppingCartType"/>.</param>
         /// <returns>The <see cref="Task{ShoppingCart}"/>.</returns>
         Task<ShoppingCart> DeleteShoppingCartItem(int productId, int customerId, ShoppingCartType shoppingCartType = ShoppingCartType.ShoppingCart);
+
+        /// <summary>
+        /// The CalculateCartItemPrice.
+        /// </summary>
+        /// <param name="cartItem">The cartItem<see cref="ShoppingCartItem"/>.</param>
+        /// <param name="discountAmount">The discountAmount<see cref="int"/>.</param>
+        /// <param name="isPercent">The isPercent<see cref="bool"/>.</param>
+        void CalculateCartItemPrice(ShoppingCartItem cartItem, int discountAmount, bool isPercent = false);
     }
 }

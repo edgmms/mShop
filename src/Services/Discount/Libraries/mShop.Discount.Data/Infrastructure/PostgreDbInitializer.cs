@@ -35,7 +35,6 @@ namespace mShop.Discount.Data.Infrastructure
                 {
                     _couponRepository.InsertRange(SeedCoupons());
                 }
-
             }
             catch (Exception ex)
             {

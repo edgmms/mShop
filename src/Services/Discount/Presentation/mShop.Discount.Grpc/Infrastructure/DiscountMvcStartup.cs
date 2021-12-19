@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using mShop.Basket.Api.Infrastructure.StartupExtensions;
+using mShop.Discount.Grpc.Infrastructure.StartupExtensions;
 using mShop.Core.Infrastructure;
 
-namespace mShop.Basket.Api.Infrastructure
+namespace mShop.Discount.Grpc.Infrastructure
 {
     /// <summary>
     /// Represents object for the configuring MVC on application startup
     /// </summary>
-    public partial class BasketMvcStartup : IMShopStartup
+    public partial class DiscountMvcStartup : IMShopStartup
     {
         /// <summary>
         /// Add and configure any of the middleware
@@ -18,17 +18,7 @@ namespace mShop.Basket.Api.Infrastructure
         /// <param name="configuration">Configuration of the application</param>
         public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
         {
-            //add and configure MVC feature
-            services.AddBasketMvc();
-
-            //add swagger
-            services.AddBasketSwaggerGen();
-
-            //add discount grpc client
-            services.AddGrpcServiceClient(configuration);
-
-            //add event bus
-            services.AddBasketEventBus(configuration);
+            services.AddGrpc();
         }
 
         /// <summary>
@@ -38,10 +28,7 @@ namespace mShop.Basket.Api.Infrastructure
         public void Configure(IApplicationBuilder application)
         {
             //Endpoints routing
-            application.UseBasketEndpoints();
-
-            //add swagger ui
-            application.UseBasketSwaggerUI();
+            application.UseDiscountEndpoints();
         }
 
         /// <summary>
