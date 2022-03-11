@@ -35,6 +35,7 @@ namespace mShop.Basket.Data.Infrastructure
             }
             catch (Exception)
             {
+
             }
         }
 

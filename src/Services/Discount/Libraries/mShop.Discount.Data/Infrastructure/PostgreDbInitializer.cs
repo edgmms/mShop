@@ -6,10 +6,15 @@ using System.Linq;
 namespace mShop.Discount.Data.Infrastructure
 {
     /// <summary>
-    /// Defines the <see cref="CatalogDbSeeder" />.
+    /// Defines the <see cref="PostgreDbInitializer" />.
     /// </summary>
     public partial class PostgreDbInitializer : IDbInitializer
     {
+        /// <summary>
+        /// Defines the _discountDbProvider.
+        /// </summary>
+        private readonly IDiscountDbProvider _discountDbProvider;
+
         /// <summary>
         /// Defines the _couponRepository.
         /// </summary>
@@ -18,19 +23,24 @@ namespace mShop.Discount.Data.Infrastructure
         /// <summary>
         /// Initializes a new instance of the <see cref="PostgreDbInitializer"/> class.
         /// </summary>
+        /// <param name="discountDbProvider">The discountDbProvider<see cref="IDiscountDbProvider"/>.</param>
         /// <param name="couponRepository">The couponRepository<see cref="IRepository{Coupon}"/>.</param>
-        public PostgreDbInitializer(IRepository<Coupon> couponRepository)
+        public PostgreDbInitializer(IDiscountDbProvider discountDbProvider, IRepository<Coupon> couponRepository)
         {
+            _discountDbProvider = discountDbProvider;
             _couponRepository = couponRepository;
         }
 
         /// <summary>
-        /// The SeedData.
+        /// The Initialize.
         /// </summary>
         public void Initialize()
         {
             try
             {
+
+                _discountDbProvider.DbContext.Database.EnsureCreated();
+
                 if (_couponRepository.Table.Count() == 0)
                 {
                     _couponRepository.InsertRange(SeedCoupons());
@@ -42,9 +52,9 @@ namespace mShop.Discount.Data.Infrastructure
         }
 
         /// <summary>
-        /// The SeedProducts.
+        /// The SeedCoupons.
         /// </summary>
-        /// <returns>The <see cref="IEnumerable{Product}"/>.</returns>
+        /// <returns>The <see cref="IEnumerable{Coupon}"/>.</returns>
         private static IEnumerable<Coupon> SeedCoupons()
         {
             return new List<Coupon> {
